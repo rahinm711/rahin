@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rahin Miah | Mathematics Teacher</title>
+<meta name="theme-color" content="#fafaf9">
+<meta name="description" content="Rahin Miah, GCSE and A-level Mathematics teacher and tutor in Southampton, UK.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#fafaf9; --paper-2:#f5f5f4; --card:#ffffff; --ink:#0c0a09; --ink-2:#57534e; --ink-3:#a8a29e;
+  --rule:#e7e5e4; --rule-2:#d6d3d1;
+  --teal:#2563eb; --teal-soft:#eff6ff; --rust:#57534e; --rust-soft:#f5f5f4; --plum:#57534e; --plum-soft:#f5f5f4; --gold:#57534e; --gold-soft:#f5f5f4;
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:Geist,Inter,system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.mono{font-family:"Geist Mono",ui-monospace,monospace}
+.serif{font-family:Geist,Inter,sans-serif;font-weight:600;letter-spacing:-.03em}
+::selection{background:#0c0a09;color:#fff}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:30;background:rgba(250,250,249,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.bar .wrap{height:58px;display:flex;align-items:center;gap:18px}
+.bar .name{font-weight:600;text-decoration:none}
+.bar .sec{font-family:"Geist Mono";font-size:12px;color:var(--ink-3);border-left:1px solid var(--rule-2);padding-left:14px}
+.bar nav{margin-left:auto;display:flex;gap:20px;align-items:center}
+.bar nav a{font-size:13.5px;color:var(--ink-2);text-decoration:none}
+.bar nav a:hover{color:var(--ink)}
+.avail{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;color:#15803d;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:999px;padding:4px 11px}
+.avail i{width:7px;height:7px;border-radius:50%;background:#22c55e;animation:p 2.2s infinite}
+@keyframes p{0%{box-shadow:0 0 0 0 rgba(37,99,235,.5)}70%{box-shadow:0 0 0 7px rgba(37,99,235,0)}100%{box-shadow:none}}
+.kbtn{font-family:"Geist Mono";font-size:12.5px;border:1px solid var(--rule-2);background:var(--card);border-radius:8px;padding:6px 10px;cursor:pointer;color:var(--ink)}
+.kbtn:hover{border-color:var(--ink)}
+
+/* section headings */
+section{padding:88px 0;border-bottom:1px solid var(--rule)}
+.shead{display:flex;align-items:baseline;gap:16px;margin-bottom:34px}
+.snum{font-family:"Geist Mono";font-size:13px;color:var(--ink-3)}
+.shead h2{font-family:Geist,Inter,sans-serif;font-weight:500;font-size:clamp(30px,3.6vw,44px);letter-spacing:-.02em;line-height:1.1}
+.shead p{color:var(--ink-2);margin-left:auto;max-width:380px;font-size:14.5px;text-align:right}
+
+/* hero */
+.hero{position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.chiprow{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chiprow span{font-family:"Geist Mono";font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--rule-2);background:var(--card)}
+.hero{padding:76px 0 70px}
+.hero-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:56px;align-items:end}
+.kicker{font-family:"Geist Mono";font-size:13px;color:var(--ink-3)}
+.hero h1{font-family:Geist,Inter,sans-serif;font-weight:600;font-size:clamp(40px,5.6vw,72px);line-height:1.04;letter-spacing:-.045em;margin-top:18px}
+.hero h1 em{font-style:normal;color:var(--ink-3)}
+.hero .lede{font-size:18px;color:var(--ink-2);margin-top:24px;max-width:600px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.b{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-size:14.5px;font-weight:500;text-decoration:none;border:1px solid var(--rule-2);background:var(--card);cursor:pointer;color:var(--ink);transition:transform .12s,border-color .12s}
+.b:hover{transform:translateY(-1px);border-color:var(--ink)}
+.b.dark{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.b.dark:hover{background:#000}
+.idcard{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:22px;box-shadow:0 1px 0 var(--rule),0 18px 40px -28px rgba(12,10,9,.35)}
+.idcard .row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--rule);font-size:14px}
+.idcard .row:last-child{border-bottom:0}
+.idcard .row span:first-child{font-family:"Geist Mono";font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
+.idcard .row span:last-child{text-align:right;font-weight:500}
+.avatar{position:relative;width:120px;height:120px;margin-bottom:16px}
+.avatar::before{content:"";position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(var(--teal),transparent 40%,var(--teal) 80%,transparent);animation:spin 8s linear infinite}
+.avatar::after{content:"";position:absolute;inset:-1px;border-radius:50%;background:var(--card)}
+.avatar img,.avatar span{position:absolute;inset:2px;border-radius:50%;z-index:1}
+.avatar img{width:calc(100% - 4px);height:calc(100% - 4px);object-fit:cover}
+.avatar span{display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:Geist,Inter,sans-serif;font-size:30px}
+.avatar img+span{display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.mono-tag{display:inline-block;width:52px;height:52px;border-radius:12px;background:var(--ink);color:var(--paper);font-family:Geist,Inter,sans-serif;font-size:22px;display:grid;place-items:center;margin-bottom:12px}
+
+/* numbers strip */
+.strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--rule);border-radius:14px;background:var(--card);margin-top:56px;overflow:hidden}
+.strip div{padding:20px 22px;border-right:1px solid var(--rule)}
+.strip div:last-child{border-right:0}
+.strip b{font-family:Geist,Inter,sans-serif;font-weight:500;font-size:30px;display:block;line-height:1.1}
+.strip span{font-size:13px;color:var(--ink-2)}
+
+/* log timeline */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+.tab{font-family:"Geist Mono";font-size:12.5px;padding:6px 12px;border-radius:8px;border:1px solid var(--rule-2);background:transparent;cursor:pointer;color:var(--ink-2)}
+.tab.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.log{position:relative;padding-left:34px}
+.log::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:repeating-linear-gradient(var(--rule-2) 0 6px,transparent 6px 10px)}
+.entry{position:relative;background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:20px 22px;margin-bottom:14px;transition:opacity .2s}
+.entry::before{content:"";position:absolute;left:-29px;top:24px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--c,var(--teal))}
+.entry.hide{display:none}
+.entry .top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.entry .hash{font-family:"Geist Mono";font-size:12px;color:var(--ink-3)}
+.entry .cat{font-family:"Geist Mono";font-size:11.5px;padding:2px 8px;border-radius:6px;background:var(--cs,var(--teal-soft));color:var(--c,var(--teal))}
+.entry h3{font-size:18px;font-weight:600;margin-top:8px;letter-spacing:-.01em}
+.entry .org{font-size:14px;color:var(--ink-2)}
+.entry .org a{color:var(--teal);text-decoration:none;border-bottom:1px solid #bfdbfe}
+.entry ul{margin-top:10px;padding-left:18px;color:var(--ink-2);font-size:15px}
+.entry li{margin:3px 0}
+.entry li strong{color:var(--ink);font-weight:600}
+.research{--c:var(--teal);--cs:var(--teal-soft)} .work{--c:var(--ink-2);--cs:var(--paper-2)}
+.entry:hover{box-shadow:0 12px 30px -24px rgba(12,10,9,.45)} .education{--c:var(--ink-3);--cs:var(--paper-2)}
+
+/* case files */
+.cases{display:grid;gap:18px}
+.case{display:grid;grid-template-columns:1.15fr 1fr;background:var(--card);border:1px solid var(--rule);border-radius:16px;overflow:hidden}
+.case .l{padding:28px}
+.case .lbl{font-family:"Geist Mono";font-size:12px;color:var(--rust)}
+.case h3{font-family:Geist,Inter,sans-serif;font-weight:500;font-size:26px;line-height:1.2;margin-top:6px;letter-spacing:-.015em}
+.steps{margin-top:16px;display:grid;gap:12px}
+.steps div{display:grid;grid-template-columns:110px 1fr;gap:12px;font-size:15px}
+.steps b{font-family:"Geist Mono";font-weight:500;font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
+.steps span{color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.chip{font-family:"Geist Mono";font-size:12px;padding:3px 9px;border-radius:6px;background:var(--paper-2);border:1px solid var(--rule)}
+.case .r{background:var(--paper-2);border-left:1px solid var(--rule);padding:22px;display:flex;flex-direction:column}
+.graph-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.graph-head span{font-family:"Geist Mono";font-size:11.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.08em}
+.run{font-family:"Geist Mono";font-size:12px;padding:5px 11px;border-radius:7px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
+.g{display:flex;flex-direction:column;gap:6px;flex:1;justify-content:center}
+.gn{font-family:"Geist Mono";font-size:12.5px;padding:9px 12px;border-radius:9px;border:1px solid var(--rule-2);background:var(--card);transition:all .25s;cursor:default}
+.gn small{display:block;color:var(--ink-3);font-size:11px;margin-top:2px}
+.gn.active{border-color:var(--teal);background:var(--teal-soft);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.gn.done{border-color:#93c5fd}
+.gr{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.gr .gn{text-align:center;padding:8px 4px;font-size:11.5px}
+.ga{text-align:center;font-size:11px;color:var(--ink-3);line-height:1.2}
+
+/* results */
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.results div{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:10px 12px}
+.results b{font-family:Geist,Inter,sans-serif;font-weight:600;font-size:22px;letter-spacing:-.03em;display:block;line-height:1.1}
+.results span{font-size:12px;color:var(--ink-2);line-height:1.3;display:block;margin-top:3px}
+.case{transition:box-shadow .2s,transform .2s}.case:hover{box-shadow:0 20px 40px -30px rgba(12,10,9,.5);transform:translateY(-2px)}
+.case .lbl{color:var(--ink-3)}
+/* motion */
+.ga{position:relative;height:16px;overflow:hidden;color:transparent}
+.ga::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%);background:repeating-linear-gradient(var(--rule-2) 0 3px,transparent 3px 6px)}
+.ga::after{content:"";position:absolute;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--teal);animation:drop 1.4s linear infinite}
+
+@keyframes drop{0%{top:-6px;opacity:0}20%{opacity:1}100%{top:16px;opacity:0}}
+.live{font-family:"Geist Mono";font-size:11.5px;display:inline-flex;align-items:center;gap:6px;color:var(--teal)}
+.live i{width:7px;height:7px;border-radius:50%;background:currentColor;animation:p 1.8s infinite}
+
+.results div{opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.case.in .results div{opacity:1;transform:none}
+.case.in .results div:nth-child(2){transition-delay:.12s}.case.in .results div:nth-child(3){transition-delay:.24s}
+.chiprow span{animation:rise .5s both}
+.chiprow span:nth-child(1){animation-delay:.05s}.chiprow span:nth-child(2){animation-delay:.1s}.chiprow span:nth-child(3){animation-delay:.15s}.chiprow span:nth-child(4){animation-delay:.2s}.chiprow span:nth-child(5){animation-delay:.25s}.chiprow span:nth-child(6){animation-delay:.3s}.chiprow span:nth-child(7){animation-delay:.35s}.chiprow span:nth-child(8){animation-delay:.4s}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.act{transition:transform .2s,box-shadow .2s}.act:hover{transform:translateY(-3px);box-shadow:0 14px 30px -24px rgba(12,10,9,.5)}
+.act .ic{transition:transform .3s}.act:hover .ic{transform:rotate(-8deg) scale(1.1)}
+.vid .pl{animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.vid pre .cur{display:inline-block;width:7px;height:14px;background:#93c5fd;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.ga::after,.avatar::before,.hero h1 em,.vid .pl,.vid pre .cur,.live i{animation:none}.chiprow span{animation:none}.results div{opacity:1;transform:none}}
+
+/* chat demo */
+.chat{display:flex;flex-direction:column;gap:10px;flex:1;justify-content:center}
+.msg{font-size:13.5px;line-height:1.55;border-radius:12px;padding:11px 13px;max-width:92%}
+.msg.q{align-self:flex-end;background:var(--ink);color:#fafaf9;border-bottom-right-radius:4px}
+.msg.a{align-self:flex-start;background:var(--card);border:1px solid var(--rule);border-bottom-left-radius:4px;min-height:96px}
+.cite{display:inline-block;font-family:"Geist Mono";font-size:10.5px;padding:0 5px;border-radius:4px;background:var(--teal-soft);color:var(--teal);border:1px solid #bfdbfe;margin:0 1px;vertical-align:1px}
+.srcs{display:flex;flex-direction:column;gap:6px}
+.src{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--ink-2);background:var(--card);border:1px solid var(--rule);border-radius:9px;padding:7px 10px;opacity:0;transform:translateY(4px);transition:all .35s}
+.src.on{opacity:1;transform:none}
+.src b{font-family:"Geist Mono";font-size:10.5px;color:var(--teal);font-weight:500}
+.tool{font-family:"Geist Mono";font-size:11px;color:var(--ink-3)}
+.tool span{color:var(--teal)}
+.tcur{display:inline-block;width:6px;height:13px;background:var(--ink);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+/* doc demo */
+.docdemo{display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1;align-items:center}
+.inv{position:relative;background:#fff;border:1px solid var(--rule);border-radius:10px;padding:14px;font-size:11.5px;overflow:hidden;box-shadow:0 10px 24px -20px rgba(12,10,9,.5)}
+.inv h5{font-size:13px;font-weight:600;letter-spacing:-.02em}
+.inv .ln{display:flex;justify-content:space-between;padding:5px 6px;margin:2px -6px;border-radius:5px;color:var(--ink-2);transition:background .3s}
+.inv .ln.hit{background:var(--teal-soft);color:var(--ink)}
+.inv .ph{height:5px;border-radius:3px;background:var(--paper-2);margin:6px 0}
+.scan{position:absolute;left:0;right:0;height:26px;top:-30px;background:linear-gradient(180deg,transparent,rgba(37,99,235,.18),transparent);border-bottom:2px solid rgba(37,99,235,.55);animation:scan 3.2s ease-in-out infinite}
+@keyframes scan{0%{top:-30px}100%{top:100%}}
+.json{background:#0c0a09;color:#e7e5e4;border-radius:10px;padding:12px;font-family:"Geist Mono";font-size:11.5px;line-height:1.7;min-height:200px}
+.json .k{color:#93c5fd}.json .v{color:#fcd34d}.json .ok{color:#86efac}
+.json div{opacity:0;transition:opacity .3s}.json div.on{opacity:1}
+
+/* activities */
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.act{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:18px 20px}
+.act .ic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-size:18px;margin-bottom:10px}
+.act h4{font-size:15.5px;font-weight:600}
+.act p{font-size:14px;color:var(--ink-2);margin-top:4px}
+
+/* stack */
+.stackwrap{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
+.groups{display:grid;gap:14px}
+.grp{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:18px 20px}
+.grp h4{font-family:"Geist Mono";font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3)}
+.skills{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.sk{font-size:13.5px;padding:5px 11px;border-radius:8px;border:1px solid var(--rule-2);background:transparent;cursor:pointer;color:var(--ink);font-family:Inter}
+.sk sup{font-family:"Geist Mono";font-size:10px;color:var(--ink-3);margin-left:2px}
+.sk:hover,.sk.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.sk.on sup,.sk:hover sup{color:#d6d3d1}
+.where{background:var(--ink);color:var(--paper);border-radius:14px;padding:22px;position:sticky;top:80px;align-self:start}
+.where .h{font-family:"Geist Mono";font-size:12px;color:#a8a29e;text-transform:uppercase;letter-spacing:.08em}
+.where h4{font-family:Geist,Inter,sans-serif;font-weight:500;font-size:26px;margin-top:6px}
+.where ul{list-style:none;margin-top:14px;display:grid;gap:10px}
+.where li{font-size:14.5px;padding-left:16px;position:relative;color:#e7e5e4}
+.where li::before{content:"→";position:absolute;left:0;color:#93c5fd}
+
+/* pubs */
+.pubstats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.pubstats span{font-family:"Geist Mono";font-size:12.5px;padding:5px 11px;border-radius:8px;background:var(--card);border:1px solid var(--rule)}
+.pub{display:grid;grid-template-columns:60px 1fr auto;gap:18px;padding:20px 0;border-top:1px solid var(--rule);align-items:start}
+.pub:last-child{border-bottom:1px solid var(--rule)}
+.pub .n{font-family:Geist,Inter,sans-serif;font-size:28px;color:var(--rule-2);line-height:1}
+.pub h3{font-size:17px;font-weight:600;line-height:1.4;letter-spacing:-.005em}
+.pub p{font-size:14.5px;color:var(--ink-2);margin-top:4px}
+.pub .v{font-family:"Geist Mono";font-size:12px;color:var(--ink-3);margin-top:6px}
+.pub .v a{color:var(--teal)}
+.st{font-family:"Geist Mono";font-size:11.5px;padding:3px 9px;border-radius:6px;white-space:nowrap}
+.st.ok{background:var(--teal-soft);color:var(--teal)}
+.st.wip{background:var(--gold-soft);color:var(--gold)}
+
+/* channel */
+.chan{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.vid{aspect-ratio:16/9;border-radius:16px;background:#0c0a09;position:relative;overflow:hidden;border:1px solid var(--ink)}
+.vid pre{position:absolute;left:22px;top:20px;font-family:"Geist Mono";font-size:13px;line-height:1.75;color:#a8a29e}
+.vid pre b{color:#93c5fd;font-weight:400}.vid pre i{color:#fcd34d;font-style:normal}
+.vid .pl{position:absolute;right:22px;bottom:22px;width:64px;height:46px;border-radius:12px;background:#d93025;display:grid;place-items:center}
+.vid .pl::after{content:"";border-left:17px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.vid .cap{position:absolute;left:22px;bottom:22px;color:#f7f5f0;font-size:14px;font-weight:500}
+.chan h3{font-family:Geist,Inter,sans-serif;font-weight:500;font-size:30px;line-height:1.15}
+.chan p{color:var(--ink-2);margin-top:12px}
+.plats{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:36px}
+.contact h3{font-family:Geist,Inter,sans-serif;font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.02em}
+.contact h3 em{color:var(--teal)}
+.contact .p{color:var(--ink-2);margin-top:14px}
+.direct{margin-top:22px;display:grid;gap:8px}
+.direct div{display:flex;justify-content:space-between;align-items:center;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:11px 14px;font-size:14.5px}
+.direct span{font-family:"Geist Mono";font-size:13.5px}
+.cp{font-family:"Geist Mono";font-size:12px;border:1px solid var(--rule-2);background:transparent;border-radius:7px;padding:4px 10px;cursor:pointer}
+.cp:hover{border-color:var(--ink)}
+form{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:24px;display:grid;gap:14px}
+form .t{font-family:"Geist Mono";font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.08em}
+label{font-size:13px;font-weight:500;color:var(--ink-2);display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:15px;padding:11px 12px;border-radius:9px;border:1px solid var(--rule-2);background:var(--paper);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--teal);outline-offset:1px;border-color:var(--teal)}
+textarea{min-height:110px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hint{font-size:12.5px;color:var(--ink-3)}
+.sent{display:none;font-size:14px;background:var(--teal-soft);color:var(--teal);border-radius:10px;padding:12px 14px}
+
+/* terminal */
+.term{margin-top:56px;background:#0c0a09;border-radius:14px;color:#e7e5e4;font-family:"Geist Mono";font-size:13.5px;overflow:hidden}
+.term .tb{display:flex;justify-content:space-between;padding:10px 14px;border-bottom:1px solid #292524;color:#a8a29e;font-size:12px}
+.term .out{padding:14px 16px;max-height:220px;overflow:auto;line-height:1.7;white-space:pre-wrap}
+.term .out .p{color:#93c5fd}
+.term .in{display:flex;gap:8px;padding:0 16px 14px;align-items:center}
+.term .in span{color:#93c5fd}
+.term input{background:transparent;border:0;color:#f7f5f0;font-family:"Geist Mono";font-size:13.5px;padding:4px 0;outline:none}
+.term input:focus{outline:none}
+
+/* palette */
+.pal{position:fixed;inset:0;background:rgba(12,10,9,.35);display:none;align-items:flex-start;justify-content:center;padding-top:14vh;z-index:60}
+.pal.open{display:flex}
+.pal .box{width:min(560px,92vw);background:var(--card);border:1px solid var(--rule-2);border-radius:14px;box-shadow:0 30px 80px -30px rgba(0,0,0,.45);overflow:hidden}
+.pal input{border:0;border-bottom:1px solid var(--rule);border-radius:0;background:transparent;padding:16px 18px;font-size:16px}
+.pal input:focus{outline:none}
+.pal ul{list-style:none;max-height:320px;overflow:auto;padding:6px}
+.pal li{padding:10px 12px;border-radius:9px;cursor:pointer;display:flex;justify-content:space-between;font-size:14.5px}
+.pal li small{font-family:"Geist Mono";color:var(--ink-3);font-size:11.5px}
+.pal li.sel,.pal li:hover{background:var(--paper-2)}
+
+footer{padding:36px 0 56px;color:var(--ink-3);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,14px);background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;font-size:14px;opacity:0;transition:all .2s;pointer-events:none;z-index:70}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .55s,transform .55s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.avail i{animation:none}}
+
+@media (max-width:900px){
+  .docdemo{grid-template-columns:1fr}
+  .bar nav a{display:none}.bar .sec{display:none}
+  .hero-grid,.case,.stackwrap,.chan,.contact{grid-template-columns:1fr}
+  .acts{grid-template-columns:1fr}.results{grid-template-columns:1fr 1fr}
+  .case .r{border-left:0;border-top:1px solid var(--rule)}
+  .strip{grid-template-columns:repeat(2,1fr)}.strip div:nth-child(2){border-right:0}.strip div:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+  .shead{flex-wrap:wrap}.shead p{margin-left:0;text-align:left}
+  .pub{grid-template-columns:1fr}.pub .n{display:none}
+  .where{position:static}
+  .two{grid-template-columns:1fr}
+  .steps div{grid-template-columns:1fr;gap:2px}
+}
+
+/* additions */
+.note{font-family:"Geist Mono";font-size:11px;color:var(--ink-3)}
+.plan{margin-top:16px;font-size:13.5px;color:var(--ink-2);background:var(--paper-2);border:1px dashed var(--rule-2);border-radius:10px;padding:10px 12px}
+.plan b{font-family:"Geist Mono";font-weight:500;font-size:11.5px;color:var(--ink);text-transform:uppercase;letter-spacing:.06em;margin-right:6px}
+.json.static div{opacity:1}
+.json .c{color:#78716c}
+.cmp{display:grid;gap:14px;flex:1;align-content:center}
+.cmp h6{font-family:"Geist Mono";font-weight:500;font-size:11.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.cmp .row{display:grid;grid-template-columns:86px 1fr 52px;gap:8px;align-items:center;font-size:12.5px;margin:4px 0}
+.cmp .track{height:12px;border-radius:6px;background:var(--card);border:1px solid var(--rule);overflow:hidden}
+.cmp .fill{height:100%;width:0;background:var(--teal);border-radius:6px;transition:width 1.1s ease}
+.cmp .fill.grey{background:var(--rule-2)}
+.case.in .cmp .fill{width:var(--w)}
+.cmp .val{font-family:"Geist Mono";font-size:12px;text-align:right}
+.math{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.8}
+.math .f{font-family:"Geist Mono";font-size:13px;background:var(--paper-2);border-radius:8px;padding:8px 10px;margin:8px 0}
+@media (prefers-reduced-motion:reduce){.case .cmp .fill{transition:none;width:var(--w)}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="name" href="#top">Rahin Miah</a>
+    <span class="sec" id="cursec">00 · Intro</span>
+    <nav>
+      <a href="#log">Journey</a><a href="#work">Teaching</a><a href="#stack">Toolkit</a><a href="#list">Subjects</a><a href="#contact">Contact</a>
+      <span class="avail"><i></i>Available</span>
+      <button class="kbtn" id="openPal" aria-label="Open command menu">⌘K</button>
+    </nav>
+  </div>
+</header>
+<main id="top">
+<section class="hero" data-sec="00 · Intro">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">Mathematics Teacher · GCSE &amp; A-level · Southampton, UK</div>
+        <h1>I help pupils see <em>why the maths works.</em></h1>
+        <p class="lede">Two years teaching A-level and IGCSE Mathematics, plus a term lecturing Numerical Methods to 300+ university students. MSc Data Science with Distinction, so I can show pupils where the maths they learn is used.</p>
+        <div class="chiprow"><span>A-level Maths</span><span>GCSE Maths</span><span>Statistics</span><span>Computer Science</span><span>Physics</span><span>Python</span></div>
+        <div class="actions">
+          <a class="b dark" href="#contact">Get in touch →</a>
+          <button class="b" data-copy="rahinm711@gmail.com">Copy email</button>
+          <a class="b" href="https://linkedin.com/in/rahinmiah">LinkedIn ↗</a>
+        </div>
+      </div>
+      <aside class="idcard">
+        <!-- PHOTO: rahin.jpg must sit next to this file -->
+        <div class="avatar"><img src="rahin.jpg" alt="Rahin Miah" onerror="this.remove()"><span>RM</span></div>
+        <div class="row"><span>Role</span><span>Maths teacher / tutor</span></div><div class="row"><span>Levels</span><span>GCSE · IGCSE · A-level</span></div><div class="row"><span>Degree</span><span>MSc Data Science, Distinction</span></div><div class="row"><span>QTS</span><span>Open to training towards QTS</span></div><div class="row"><span>DBS</span><span>Willing to obtain Enhanced DBS</span></div><div class="row"><span>Right to work</span><span>UK, no sponsorship</span></div>
+      </aside>
+    </div>
+    <div class="strip rv"><div><b>2 yrs+</b><span>Secondary maths, physics and CS</span></div><div><b data-count="300" data-suffix="+">300+</b><span>University students taught</span></div><div><b>A-level</b><span>and IGCSE Mathematics taught</span></div><div><b>7.5</b><span>IELTS Academic</span></div></div>
+  </div>
+</section>
+<section id="log" data-sec="01 · Teaching journey">
+  <div class="wrap">
+    <div class="shead"><span class="snum">01</span><h2>Teaching journey</h2><p>The full journey, newest first. Filter by track.</p></div>
+    <div class="tabs" role="tablist"><button class="tab on" data-f="all">all</button><button class="tab" data-f="work">work</button><button class="tab" data-f="education">education</button></div>
+    <div class="log"><article class="entry work rv">
+        <div class="top"><span class="hash">May 2026 → present</span><span class="cat">work</span></div>
+        <h3>Customer Service Assistant</h3>
+        <div class="org">Waitrose &amp; Partners · Winchester, UK</div>
+      </article><article class="entry education rv">
+        <div class="top"><span class="hash">Sep 2025 → Sep 2026</span><span class="cat">education</span></div>
+        <h3>MSc Data Science, Distinction</h3>
+        <div class="org">University of Surrey · Guildford, UK</div>
+      </article><article class="entry work rv">
+        <div class="top"><span class="hash">Jun 2025 → Sep 2025</span><span class="cat">work</span></div>
+        <h3>Adjunct Lecturer, Computer Science and Engineering</h3>
+        <div class="org"><a href="https://lus.ac.bd/">Leading University</a> · Sylhet, Bangladesh</div><ul><li>Taught undergraduate <strong>Numerical Methods</strong> and Machine Learning to <strong>300+</strong> students.</li><li>Ran hands-on Python labs, debugged student work and set and marked assessments.</li></ul>
+      </article><article class="entry work rv">
+        <div class="top"><span class="hash">Jun 2023 → Sep 2025</span><span class="cat">work</span></div>
+        <h3>STEM Academic Instructor</h3>
+        <div class="org"><a href="https://octagonstudents.com/">Octagon Learning</a> · Sylhet, Bangladesh</div><ul><li>Taught <strong>A-level and IGCSE Mathematics</strong>, IGCSE Physics and Computer Science.</li><li>First instructor to introduce and teach IGCSE Computer Science to pupils in Sylhet.</li></ul>
+      </article><article class="entry education rv">
+        <div class="top"><span class="hash">2021 → 2025</span><span class="cat">education</span></div>
+        <h3>BSc Computer Science and Engineering, CGPA 3.88 / 4.00</h3>
+        <div class="org">Leading University · A+ in Machine Learning, Artificial Intelligence, Computer Security, Computer Networks</div>
+      </article></div>
+  </div>
+</section>
+<section id="work" data-sec="02 · Teaching">
+  <div class="wrap">
+    <div class="shead"><span class="snum">02</span><h2>Teaching</h2><p>How I teach, with real examples.</p></div>
+    <div class="cases"><article class="case rv">
+        <div class="l">
+          <div class="lbl">01 · a-level &amp; igcse mathematics</div>
+          <h3>Secondary Mathematics at Octagon Learning</h3>
+          <div class="steps"><div><b>The setting</b><span>Mixed-ability pupils preparing for A-level and IGCSE Mathematics exams.</span></div><div><b>How I teach</b><span>Short recall starter, a fully worked example, guided practice together, then independent work with extension and support, finished with an exam-style question and feedback.</span></div></div>
+          <div class="results"><div><b>2 yrs+</b><span>teaching secondary pupils</span></div><div><b>A-level</b><span>and IGCSE Maths</span></div><div><b>3</b><span>subjects: Maths, Physics, CS</span></div></div>
+          <div class="chips"><span class="chip">A-level Mathematics</span><span class="chip">IGCSE Mathematics</span><span class="chip">Exam preparation</span><span class="chip">Differentiation</span></div>
+        </div>
+        <div class="r"><div class="graph-head"><span>lesson structure</span><button class="run">▶ run</button></div><div class="g"><div class="gn">recall starter<small>what do we already know?</small></div><div class="ga">↓</div><div class="gn">worked example<small>I do: every step shown</small></div><div class="ga">↓</div><div class="gn">guided practice<small>we do: together</small></div><div class="ga">↓</div><div class="gr"><div class="gn">independent</div><div class="gn">extension</div><div class="gn">support</div></div><div class="ga">↓</div><div class="gn">exam-style question<small>apply under exam conditions</small></div><div class="ga">↓</div><div class="gn">feedback<small>next steps for each pupil</small></div></div></div>
+      </article><article class="case rv">
+        <div class="l">
+          <div class="lbl">02 · numerical methods · university</div>
+          <h3>From A-level Calculus to Numerical Methods</h3>
+          <div class="steps"><div><b>The setting</b><span>Undergraduate Numerical Methods for 300+ computer science students.</span></div><div><b>Why it matters for A-level</b><span>Iteration and Newton-Raphson are on the A-level Mathematics specification. I can teach the method by hand and show pupils how a computer runs the same steps.</span></div></div>
+          <div class="results"><div><b>300+</b><span>undergraduates taught</span></div><div><b>Python</b><span>labs alongside lectures</span></div><div><b>A-level</b><span>numerical methods link</span></div></div>
+          <div class="chips"><span class="chip">Numerical Methods</span><span class="chip">Newton-Raphson</span><span class="chip">Iteration</span><span class="chip">Python</span></div>
+        </div>
+        <div class="r"><div class="graph-head"><span>worked example</span><span class="note">Newton-Raphson</span></div>
+          <div class="math">Find √2 by solving <b>f(x) = x² − 2 = 0</b>
+            <div class="f">x<sub>n+1</sub> = x<sub>n</sub> − f(x<sub>n</sub>) / f′(x<sub>n</sub>) = x<sub>n</sub> − (x<sub>n</sub>² − 2) / 2x<sub>n</sub></div>
+            <div class="json reveal" style="min-height:auto">
+              <div>x₀ = <span class="v">1</span></div>
+              <div>x₁ = 1 − (1 − 2)/2 = <span class="v">1.5</span></div>
+              <div>x₂ = 1.5 − 0.25/3 = <span class="v">1.416667</span></div>
+              <div>x₃ = <span class="v">1.414216</span></div>
+              <div class="ok">✓ √2 = 1.414214 to 6 d.p. after 4 steps</div>
+            </div>
+          </div></div>
+      </article><article class="case rv">
+        <div class="l">
+          <div class="lbl">03 · curriculum · computer science</div>
+          <h3>Bringing IGCSE Computer Science to Sylhet</h3>
+          <div class="steps"><div><b>The gap</b><span>No one in Sylhet was teaching IGCSE Computer Science.</span></div><div><b>What I did</b><span>Became the first instructor to introduce and teach it, using project-based, hands-on learning so pupils wrote real programs, not just exam answers.</span></div></div>
+          <div class="results"><div><b>1st</b><span>IGCSE CS instructor in Sylhet</span></div><div><b>Python</b><span>project-based learning</span></div><div><b>YouTube</b><span>lessons in Sylheti</span></div></div>
+          <div class="chips"><span class="chip">IGCSE Computer Science</span><span class="chip">Python</span><span class="chip">Project-based learning</span></div>
+        </div>
+        <div class="r"><div class="graph-head"><span>course flow</span><span class="live"><i></i>auto</span></div><div class="g"><div class="gn">programming basics<small>variables, selection, loops</small></div><div class="ga">↓</div><div class="gn">algorithms<small>searching, sorting, tracing</small></div><div class="ga">↓</div><div class="gr"><div class="gn">data</div><div class="gn">networks</div><div class="gn">systems</div></div><div class="ga">↓</div><div class="gn">projects<small>pupils build real programs</small></div><div class="ga">↓</div><div class="gn">exam practice<small>past-paper questions</small></div></div></div>
+      </article></div>
+  </div>
+</section>
+<section id="stack" data-sec="03 · Toolkit">
+  <div class="wrap">
+    <div class="shead"><span class="snum">03</span><h2>Toolkit</h2><p>Pick one to see where I used it.</p></div>
+    <div class="stackwrap">
+      <div class="groups" id="groups"></div>
+      <aside class="where" id="where"><div class="h">where I used it</div><h4 id="wTitle"></h4><ul id="wList"></ul></aside>
+    </div>
+  </div>
+</section>
+<section id="list" data-sec="04 · Subjects">
+  <div class="wrap">
+    <div class="shead"><span class="snum">04</span><h2>Subjects</h2><p>What I have taught, and what I am ready to teach in the UK.</p></div>
+    <div class="pubstats"><span>taught</span><span>ready to teach</span></div>
+    <div class="pub rv"><div class="n">01</div><div><h3>A-level Mathematics</h3><p>Taught at Octagon Learning; A-level Mathematics myself.</p><div class="v">Key Stage 5</div></div><span class="st ok">taught</span></div><div class="pub rv"><div class="n">02</div><div><h3>IGCSE Mathematics</h3><p>Taught at Octagon Learning.</p><div class="v">Key Stage 4</div></div><span class="st ok">taught</span></div><div class="pub rv"><div class="n">03</div><div><h3>GCSE Mathematics (AQA, Edexcel, OCR)</h3><p>Same content area as IGCSE; ready to teach the UK specifications.</p><div class="v">Key Stage 3 and 4</div></div><span class="st wip">ready to teach</span></div><div class="pub rv"><div class="n">04</div><div><h3>IGCSE Computer Science</h3><p>First to teach it in Sylhet.</p><div class="v">Key Stage 4</div></div><span class="st ok">taught</span></div><div class="pub rv"><div class="n">05</div><div><h3>IGCSE Physics</h3><p>Taught at Octagon Learning.</p><div class="v">Key Stage 4</div></div><span class="st ok">taught</span></div><div class="pub rv"><div class="n">06</div><div><h3>Numerical Methods (university)</h3><p>Taught to 300+ undergraduates.</p><div class="v">Higher education</div></div><span class="st ok">taught</span></div>
+  </div>
+</section>
+<section id="channel" data-sec="05 · Beyond the classroom">
+  <div class="wrap">
+    <div class="shead"><span class="snum">05</span><h2>Beyond the classroom</h2><p>Making learning accessible.</p></div>
+    <div class="chan">
+      <!-- TODO: replace https://www.youtube.com/ with your channel URL (two places below) -->
+      <a class="vid rv" href="https://www.youtube.com/@rahin00" aria-label="YouTube channel">
+<pre><b>for</b> learner <b>in</b> sylhet:
+    learner.learn(<i>"python"</i>)
+    learner.build(<i>"projects"</i>)
+<span style="color:#78716c"># programming, explained in Sylheti</span> <span class="cur"></span></pre>
+        <span class="cap">Programming in Sylheti · YouTube</span>
+        <span class="pl"></span>
+      </a>
+      <div class="rv">
+        <h3>A YouTube channel teaching programming in Sylheti</h3>
+        <p>I created and run the channel so learners who don't study in English can still learn to code. Speaking Bengali and Sylheti also helps me support EAL pupils and their families.</p>
+        <div class="plats"><a class="b" href="https://www.youtube.com/">YouTube ↗</a><a class="b" href="https://linkedin.com/in/rahinmiah">LinkedIn ↗</a></div>
+      </div>
+    </div>
+    <div class="acts"><div class="act rv"><div class="ic" style="background:var(--teal-soft)">🎓</div><h4>Curriculum pioneer</h4><p>First instructor to bring IGCSE Computer Science to pupils in Sylhet.</p></div><div class="act rv"><div class="ic" style="background:var(--plum-soft)">🧮</div><h4>Clubs and revision</h4><p>Happy to run maths clubs, revision sessions and coding clubs.</p></div><div class="act rv"><div class="ic" style="background:var(--gold-soft)">🌐</div><h4>Languages</h4><p>English (IELTS Academic 7.5), Bengali and Sylheti.</p></div><div class="act rv"><div class="ic" style="background:var(--teal-soft)">📺</div><h4>Tech educator</h4><p>Runs a YouTube channel teaching programming in Sylheti.</p></div><div class="act rv"><div class="ic" style="background:var(--rust-soft)">🤝</div><h4>Customer-facing</h4><p>Customer Service Assistant, Waitrose, Winchester (May 2026 to present).</p></div></div>
+  </div>
+</section>
+<section id="contact" data-sec="06 · Contact" style="border-bottom:0">
+  <div class="wrap">
+    <div class="shead"><span class="snum">06</span><h2>Open channel</h2></div>
+    <div class="contact">
+      <div>
+        <h3>Looking for a <em>maths teacher or tutor?</em> Let's talk.</h3>
+        <p class="p">Mathematics teacher, maths tutor, cover supervisor and FE maths roles in Southampton, Winchester and nearby. Open to training towards QTS. UK right to work.</p>
+        <div class="direct">
+          <div><span>rahinm711@gmail.com</span><button class="cp" data-copy="rahinm711@gmail.com">copy</button></div>
+          <div><span>linkedin.com/in/rahinmiah</span><a class="cp" href="https://linkedin.com/in/rahinmiah" style="text-decoration:none">open</a></div>
+        </div>
+      </div>
+      <form id="cform">
+        <div class="t">new message → rahinm711@gmail.com</div>
+        <div class="two">
+          <label>Your name<input name="name" required autocomplete="name"></label>
+          <label>School or organisation<input name="company" autocomplete="organization"></label>
+        </div>
+        <div class="two">
+          <label>Your email<input name="email" type="email" required autocomplete="email"></label>
+          <label>Role<select name="role"><option>Maths Teacher</option><option>Maths Tutor</option><option>Cover Supervisor</option><option>Teaching Assistant (Maths)</option><option>FE Maths Lecturer</option><option>Other</option></select></label>
+        </div>
+        <label>Message<textarea name="msg" placeholder="Tell me about the role, the pupils and the school."></textarea></label>
+        <button class="b dark" type="submit" style="justify-content:center">Send to Rahin (⌘/Ctrl + Enter)</button>
+        <div class="hint">Opens your email app with the message ready. If nothing opens, the message is copied so you can paste it to rahinm711@gmail.com.</div>
+        <div class="sent" id="sent"></div>
+      </form>
+    </div>
+    <div class="term">
+      <div class="tb"><span>rahin@southampton: ~</span><span>type “help”</span></div>
+      <div class="out" id="tout"><span class="p">rahin@southampton:~$</span> whoami
+Rahin Miah · Mathematics teacher · GCSE &amp; A-level · Southampton. Type help for commands.</div>
+      <div class="in"><span>$</span><input id="tin" aria-label="Terminal input" autocomplete="off" spellcheck="false" placeholder="help"></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>© 2026 Rahin Miah · Southampton, UK</span><span class="mono">every step on the board, every pupil on board</span></div></footer>
+<div class="pal" id="pal" role="dialog" aria-label="Command menu">
+  <div class="box"><input id="palIn" placeholder="Jump to a section or action…" autocomplete="off"><ul id="palList"></ul></div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const CFG={"stack": {"Teaching practice": {"Worked examples": ["Octagon Learning", "Leading University lectures"], "Exam-style practice": ["Octagon Learning (A-level, IGCSE)"], "Differentiation": ["Octagon Learning (mixed ability)"], "Assessment & marking": ["Leading University", "Octagon Learning"], "Explaining in a second language": ["YouTube channel in Sylheti", "Octagon Learning"]}, "Subject knowledge": {"Pure mathematics": ["A-level teaching", "BSc Computer Science and Engineering"], "Statistics": ["A-level teaching", "MSc Data Science"], "Numerical methods": ["University lecturing"], "Computer Science": ["IGCSE teaching", "BSc and MSc"], "Physics": ["IGCSE teaching"]}, "Classroom tech": {"Python & Jupyter": ["University labs", "IGCSE CS lessons"], "Video lessons": ["YouTube channel"]}}, "first": "Worked examples", "term": {"whoami": "Rahin Miah · Mathematics teacher · GCSE & A-level · Southampton", "subjects": "A-level Maths · GCSE/IGCSE Maths · IGCSE Physics · Computer Science", "approach": "recall starter → worked example → guided practice → independent work → exam question → feedback", "experience": "2 yrs+ secondary teaching · 300+ university students · YouTube lessons in Sylheti"}, "sections": [["Teaching journey", "log"], ["Teaching", "work"], ["Toolkit", "stack"], ["Subjects", "list"], ["Beyond the classroom", "channel"], ["Contact", "contact"]], "subject": "role"};
+const EMAIL="rahinm711@gmail.com";
+const toastEl=document.getElementById('toast');
+function toast(m){toastEl.textContent=m;toastEl.classList.add('show');clearTimeout(toastEl._t);toastEl._t=setTimeout(()=>toastEl.classList.remove('show'),1800)}
+async function copy(v,msg){try{await navigator.clipboard.writeText(v);toast(msg||('Copied '+v));return true}catch(e){toast(v);return false}}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>copy(b.dataset.copy)));
+const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* reveal + current section */
+const io=('IntersectionObserver' in window)?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1}):null;
+document.querySelectorAll('.rv').forEach(n=>io?io.observe(n):n.classList.add('in'));
+const cur=document.getElementById('cursec');
+if('IntersectionObserver' in window){const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)cur.textContent=e.target.dataset.sec}),{rootMargin:'-45% 0px -50% 0px'});document.querySelectorAll('section[data-sec]').forEach(s=>so.observe(s))}
+
+/* log filter */
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));t.classList.add('on');
+  const f=t.dataset.f;document.querySelectorAll('.entry').forEach(e=>e.classList.toggle('hide',f!=='all'&&!e.classList.contains(f)));
+}));
+
+/* count-up */
+function countUp(el){const t=parseFloat(el.dataset.count),d=+(el.dataset.dec||0),pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',com=el.dataset.comma;const st=performance.now(),dur=1100;
+  function f(n){let v=(t*n).toFixed(d);if(com)v=Number(v).toLocaleString('en-GB');return pre+v+suf}
+  (function step(now){const k=Math.min(1,(now-st)/dur),e=1-Math.pow(1-k,3);el.textContent=f(e);if(k<1)requestAnimationFrame(step)})(st)}
+if(!reduce&&'IntersectionObserver' in window){const co=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){countUp(e.target);co.unobserve(e.target)}}),{threshold:.6});document.querySelectorAll('[data-count]').forEach(n=>co.observe(n))}
+
+/* auto-animated pipelines (cases without a run button) */
+document.querySelectorAll('.case').forEach(c=>{
+  if(c.querySelector('.run')||reduce)return;
+  const nodes=[...c.querySelectorAll('.g > .gn, .g .gr')];if(!nodes.length)return;let i=0;
+  const flat=n=>n.classList.contains('gr')?[...n.querySelectorAll('.gn')]:[n];
+  setInterval(()=>{c.querySelectorAll('.gn').forEach(x=>x.classList.remove('active'));flat(nodes[i]).forEach(x=>x.classList.add('active'));i=(i+1)%nodes.length},900);
+});
+
+/* run graph */
+document.querySelectorAll('.case').forEach(c=>{
+  const btn=c.querySelector('.run');if(!btn)return;const nodes=[...c.querySelectorAll('.g > .gn, .g .gr')];
+  btn.addEventListener('click',()=>{
+    if(btn.disabled)return;btn.disabled=true;btn.textContent='● running';
+    c.querySelectorAll('.gn').forEach(n=>n.classList.remove('active','done'));
+    nodes.forEach((n,i)=>setTimeout(()=>{
+      if(i>0){const p=nodes[i-1];(p.classList.contains('gr')?p.querySelectorAll('.gn'):[p]).forEach(x=>{x.classList.remove('active');x.classList.add('done')})}
+      (n.classList.contains('gr')?n.querySelectorAll('.gn'):[n]).forEach(x=>x.classList.add('active'));
+      if(i===nodes.length-1)setTimeout(()=>{btn.disabled=false;btn.textContent='↻ replay'},700);
+    },i*650));
+  });
+});
+
+/* line-by-line reveal panels */
+document.querySelectorAll('.reveal').forEach(box=>{const rows=[...box.children];
+  if(reduce){rows.forEach(r=>r.classList.add('on'));return}
+  let i=0;(function step(){if(i===0)rows.forEach(r=>r.classList.remove('on'));
+    if(i<rows.length){rows[i++].classList.add('on');setTimeout(step,520)}else{i=0;setTimeout(step,3200)}})();
+});
+
+/* chat demo (AI site only) */
+(function(){const ans=document.getElementById('chatAns');if(!ans)return;const tool=document.getElementById('chatTool');const srcs=[...document.querySelectorAll('.src')];
+ const parts=[['Not always. Some models answer correctly while relying on text shortcuts ',''],['[1]','c'],['; controls that remove the image evidence expose this ',''],['[2]','c'],['.','']];
+ function run(){ans.innerHTML='';srcs.forEach(x=>x.classList.remove('on'));tool.style.opacity=1;let pi=0,ci=0;
+  setTimeout(function type(){if(pi>=parts.length){setTimeout(run,4200);return}const [t,k]=parts[pi];
+   if(k==='c'){const s=document.createElement('span');s.className='cite';s.textContent=t;ans.appendChild(s);srcs[t==='[1]'?0:1].classList.add('on');pi++;setTimeout(type,120);return}
+   if(ci===0){ans.appendChild(document.createTextNode(''))}ans.lastChild.nodeValue=t.slice(0,++ci);
+   if(ci>=t.length){pi++;ci=0}setTimeout(type,22)},900);
+  setTimeout(()=>tool.style.opacity=.55,900)}
+ if(reduce){ans.innerHTML='Not always. Some models answer correctly while relying on text shortcuts <span class="cite">[1]</span>; controls that remove the image evidence expose this <span class="cite">[2]</span>.';srcs.forEach(x=>x.classList.add('on'))}else run();
+})();
+/* document extraction demo (AI site only) */
+(function(){const lines=[...document.querySelectorAll('.inv .ln')],rows=[...document.querySelectorAll('#jsonOut div')];if(!lines.length)return;
+ if(reduce){rows.forEach(r=>r.classList.add('on'));return}
+ let i=0;function step(){if(i===0){lines.forEach(l=>l.classList.remove('hit'));rows.forEach(r=>r.classList.remove('on'));rows[0].classList.add('on')}
+  if(i<lines.length){lines[i].classList.add('hit');rows[i+1].classList.add('on');i++;setTimeout(step,650)}
+  else{rows[6].classList.add('on');rows[7].classList.add('on');i=0;setTimeout(step,3000)}}
+ step();})();
+
+/* stack with where-used */
+const groups=document.getElementById('groups'),wT=document.getElementById('wTitle'),wL=document.getElementById('wList');
+function pick(name,uses,btn){document.querySelectorAll('.sk').forEach(s=>s.classList.remove('on'));btn&&btn.classList.add('on');wT.textContent=name;wL.innerHTML='';uses.forEach(u=>{const li=document.createElement('li');li.textContent=u;wL.appendChild(li)})}
+let firstBtn=null;
+Object.entries(CFG.stack).forEach(([g,items])=>{
+  const d=document.createElement('div');d.className='grp rv in';d.innerHTML='<h4></h4><div class="skills"></div>';d.querySelector('h4').textContent=g;
+  const box=d.querySelector('.skills');
+  Object.entries(items).forEach(([s,u])=>{const b=document.createElement('button');b.className='sk';b.textContent=s;const sup=document.createElement('sup');sup.textContent=u.length;b.appendChild(sup);
+    b.addEventListener('click',()=>pick(s,u,b));b.addEventListener('mouseenter',()=>pick(s,u,b));box.appendChild(b);if(s===CFG.first)firstBtn=[s,u,b]});
+  groups.appendChild(d);
+});
+if(firstBtn)pick(...firstBtn);
+
+/* contact form */
+const form=document.getElementById('cform'),sent=document.getElementById('sent');
+function sendForm(){
+  if(!form.reportValidity())return;
+  const f=new FormData(form);
+  const subject=`${f.get('role')} ${CFG.subject}${f.get('company')?' at '+f.get('company'):''} for Rahin Miah`;
+  const body=`Hi Rahin,\n\n${f.get('msg')||''}\n\n${f.get('name')}${f.get('company')?', '+f.get('company'):''}\n${f.get('email')}`;
+  copy(`To: ${EMAIL}\nSubject: ${subject}\n\n${body}`,'Message copied as a backup');
+  location.href=`mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  sent.style.display='block';sent.textContent=`Your email app should open with the message ready. If it didn't, paste the copied message into an email to ${EMAIL}.`;
+}
+form.addEventListener('submit',e=>{e.preventDefault();sendForm()});
+form.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='Enter'){e.preventDefault();sendForm()}});
+
+/* terminal */
+const tout=document.getElementById('tout'),tin=document.getElementById('tin');
+const CMDS={};
+Object.entries(CFG.term).forEach(([k,v])=>CMDS[k]=()=>v);
+CMDS.help=()=>'commands: '+Object.keys(CFG.term).concat(['email','linkedin','hire','clear']).join(' · ');
+CMDS.email=()=>{copy(EMAIL);return EMAIL+'  (copied)'};
+CMDS.linkedin=()=>'linkedin.com/in/rahinmiah';
+CMDS.hire=()=>{document.getElementById('contact').scrollIntoView();return 'opening the contact form…'};
+tin.addEventListener('keydown',e=>{
+  if(e.key!=='Enter')return;const c=tin.value.trim().toLowerCase();tin.value='';if(!c)return;
+  if(c==='clear'){tout.innerHTML='';return}
+  const r=CMDS[c]?CMDS[c]():`command not found: ${c}. try help`;
+  const esc=x=>String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  tout.insertAdjacentHTML('beforeend',`\n<span class="p">rahin@southampton:~$</span> ${esc(c)}\n${esc(r)}`);
+  tout.scrollTop=tout.scrollHeight;
+});
+
+/* command palette */
+const pal=document.getElementById('pal'),pin=document.getElementById('palIn'),plist=document.getElementById('palList');
+const go=id=>()=>document.getElementById(id).scrollIntoView();
+const ACTIONS=[['Email Rahin','action',go('contact')],['Copy email address','action',()=>copy(EMAIL)],['Open LinkedIn','link',()=>{location.href='https://linkedin.com/in/rahinmiah'}]]
+  .concat(CFG.sections.map(([n,id],i)=>[n,String(i+1).padStart(2,'0'),go(id)]));
+let sel=0,shown=ACTIONS;
+function render(){plist.innerHTML='';shown.forEach((a,i)=>{const li=document.createElement('li');if(i===sel)li.className='sel';li.dataset.i=i;li.textContent=a[0];const sm=document.createElement('small');sm.textContent=a[1];li.appendChild(sm);plist.appendChild(li)})}
+function openPal(){pal.classList.add('open');pin.value='';shown=ACTIONS;sel=0;render();setTimeout(()=>pin.focus(),10)}
+function closePal(){pal.classList.remove('open')}
+function runSel(){const a=shown[sel];closePal();a&&a[2]()}
+document.getElementById('openPal').addEventListener('click',openPal);
+document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();pal.classList.contains('open')?closePal():openPal()}if(e.key==='Escape')closePal()});
+pal.addEventListener('click',e=>{if(e.target===pal)closePal()});
+pin.addEventListener('input',()=>{const q=pin.value.toLowerCase();shown=ACTIONS.filter(a=>a[0].toLowerCase().includes(q));sel=0;render()});
+pin.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){sel=Math.min(sel+1,shown.length-1);render();e.preventDefault()}if(e.key==='ArrowUp'){sel=Math.max(sel-1,0);render();e.preventDefault()}if(e.key==='Enter')runSel()});
+plist.addEventListener('click',e=>{const li=e.target.closest('li');if(li){sel=+li.dataset.i;runSel()}});
+
+</script>
+</body>
+</html>
